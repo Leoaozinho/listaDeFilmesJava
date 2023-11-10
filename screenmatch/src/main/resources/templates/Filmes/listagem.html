@@ -2,7 +2,7 @@
 <html lang="en"
       xmlns:th="http://thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-    layout:decorate="~{template.html}"
+      layout:decorate="~{template.html}"
 >
 <head>
     <title>Lista de filmes</title>
@@ -31,7 +31,7 @@
                 <td th:text="${filme.anoLancamento}"></td>
                 <td th:text="${filme.genero}"></td>
                 <td>
-                    <a th:href="@{/filmes/formulario?id={id}(id=${filme.id}})}" >Editar</a>
+                    <a th:href="@{/filmes/formulario?id={id}(id=${filme.id})}">Editar</a>
 
                     <form action="/filmes" method="post">
                         <input type="hidden" name="_method" value="delete">
